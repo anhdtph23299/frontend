@@ -1,0 +1,154 @@
+{
+  "gioHang": [
+    {
+      "maSanPham": "1",
+      "maNguoiDung": "1",
+      "soLuongMua": 1,
+      "id": "1"
+    },
+    {
+      "maSanPham": "1",
+      "maNguoiDung": "2",
+      "soLuongMua": 1,
+      "id": "4"
+    },
+    {
+      "maSanPham": "2",
+      "maNguoiDung": "1",
+      "soLuongMua": 3,
+      "id": "2"
+    },
+    {
+      "maNguoiDung": "1",
+      "maSanPham": "6",
+      "soLuong": 1,
+      "id": "3"
+    }
+  ],
+  "loaiSanPham": [
+    {
+      "id": "1",
+      "name": "Đồ ăn vặt"
+    },
+    {
+      "id": "2",
+      "name": "Đồ chiên"
+    },
+    {
+      "id": "5IsZAcH",
+      "name": "Đồ ăn nhanh"
+    }
+  ],
+  "nguoiDung": [
+    {
+      "role": true,
+      "email": "anhdtph23299@fpt.edu.vn",
+      "soDienThoai": "01236789",
+      "ten": "Steve Schroeder",
+      "ngaySinh": "28/7/2003",
+      "password": "12345678",
+      "diaChi": "Port Wardstead",
+      "id": "1"
+    },
+    {
+      "role": false,
+      "email": "anhdtph2329@fpt.edu.vn",
+      "soDienThoai": "01236789",
+      "ten": "Steve Schroeder",
+      "ngaySinh": "28/7/2003",
+      "password": "123",
+      "diaChi": "Port Wardstead",
+      "id": "2"
+    },
+    {
+      "role": false,
+      "email": "anhdtph2399@fpt.edu.vn",
+      "soDienThoai": "012345689",
+      "ten": "Peter Buckridge",
+      "ngaySinh": "28/7/2003",
+      "password": "12345678",
+      "diaChi": "Keeblerside",
+      "id": "3"
+    },
+    {
+      "role": false,
+      "email": "anhdtp23299@fpt.edu.vn",
+      "soDienThoai": "023456789 ",
+      "ten": "Sylvia Cremin",
+      "ngaySinh": "28/7/2003",
+      "password": "12345678",
+      "diaChi": "Reston",
+      "id": "4"
+    },
+    {
+      "role": false,
+      "email": "anhdt9@fpt.edu.vn",
+      "soDienThoai": "012456789",
+      "ten": "Percy Kutch",
+      "ngaySinh": "28/7/2003",
+      "password": "12345678",
+      "diaChi": "Alexhaven",
+      "id": "5"
+    },
+    {
+      "role": false,
+      "email": "ahdtph23299@fpt.edu.vn",
+      "soDienThoai": "01256789",
+      "ten": "Mr. Jared Hilll",
+      "ngaySinh": "28/7/2003",
+      "password": "12345678",
+      "diaChi": "New Ignatius",
+      "id": "6"
+    },
+    {
+      "role": false,
+      "email": "anhd299@fpt.edu.vn",
+      "soDienThoai": "012349",
+      "ten": "Blanca Bednar",
+      "ngaySinh": "28/7/2003",
+      "password": "12345678",
+      "diaChi": "Bradtkeboro",
+      "id": "7"
+    },
+    {
+      "role": false,
+      "email": "an23299@fpt.edu.vn",
+      "soDienThoai": "012339",
+      "ten": "Sergio Mann",
+      "ngaySinh": "28/7/2003",
+      "password": "12345678",
+      "diaChi": "West Ocietown",
+      "id": "8"
+    },
+    {
+      "role": false,
+      "email": "sktfk97@gmail.com",
+      "soDienThoai": "0389478937",
+      "ten": "Đinh Tuấn Anh",
+      "ngaySinh": "2023-01-31T17:00:00.000Z",
+      "password": "123456",
+      "diaChi": "ABC",
+      "id": "qVsKdu-"
+    },
+    {
+      "role": false,
+      "email": "anhdtph2329a9@fpt.edu.vn",
+      "soDienThoai": "0389478937",
+      "ten": "Tuan Anh",
+      "ngaySinh": "",
+      "password": "123",
+      "diaChi": "fzd",
+      "id": "PnuxH_O"
+    },
+    {
+      "role": false,
+      "email": "anhdtph2.edu.vn",
+      "soDienThoai": "0389478937",
+      "ten": "Đinh Tuấn Anh",
+      "ngaySinh": "2023-02-02T17:00:00.000Z",
+      "password": "123",
+      "diaChi": "1231",
+      "id": "oU008-9"
+    }
+  ]
+}

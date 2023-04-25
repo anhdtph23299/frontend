@@ -1,0 +1,77 @@
+<div class="cantainer">
+  <div class="row">
+    <div class="left-container col-2">
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tất cả</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Chờ thanh toán</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Đang giao</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hoàn thành</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Đã huỷ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trả hàng , hoàn tiền</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-10">
+      <h2 class="text-center">All Product</h2>
+      <div class="row">
+        <div
+          class="row border-top border-bottom"
+          ng-repeat="x in getAll |limitTo:2"
+        >
+          <div class="row main align-items-center">
+            <div class="col-1 cb">
+              <input
+                class="form-check-input mt-4"
+                type="checkbox"
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <div class="col-2">
+              <img class="img-fluid" ng-src="{{x.anh}}" />
+            </div>
+            <div class="col">
+              <div class="row text-muted">{{x.loai}}</div>
+              <div class="row">{{x.tenSanPham}}</div>
+            </div>
+            <div class="col">
+              <p>Số lượng {{x.soLuong}}</p>
+            </div>
+            <div class="col-5">
+              <button type="button" class="btn btn-danger">Mua lại</button>
+              <button type="button" class="btn btn-light">Liên hệ</button
+              ><button type="button" class="btn btn-light">Xem chi tiết</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

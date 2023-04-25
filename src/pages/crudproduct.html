@@ -1,0 +1,230 @@
+<section>
+  <div class="container">
+    <!--  -->
+    <h1 class="text-center">Thêm sản phẩm</h1>
+
+    <div class="row mb-4 mt-5">
+      <div class="col-2"></div>
+      <div class="col-2"><p>ID</p></div>
+      <div class="col-4">
+        <input
+          type="text"
+          class="form-control"
+          aria-describedby="basic-addon1"
+          ng-model="product.id"
+        />
+      </div>
+    </div>
+    <!--  -->
+    <div class="row mb-4">
+      <div class="col-2"></div>
+      <div class="col-2"><p>Tên sản phẩm</p></div>
+      <div class="col-4">
+        <input
+          type="text"
+          class="form-control"
+          aria-describedby="basic-addon1"
+          ng-model="product.tenSanPham"
+        />
+      </div>
+    </div>
+    <!--  -->
+    <div class="row mb-4">
+      <div class="col-2"></div>
+      <div class="col-2"><p>Giá tiền</p></div>
+      <div class="col-4">
+        <input
+          type="number"
+          min="0"
+          class="form-control"
+          aria-describedby="basic-addon1"
+          ng-model="product.giaTien"
+        />
+      </div>
+    </div>
+    <!--  -->
+    <div class="row mb-4">
+      <div class="col-2"></div>
+      <div class="col-2"><p>Số lượng</p></div>
+      <div class="col-4">
+        <input
+          type="number"
+          min="0"
+          class="form-control"
+          aria-describedby="basic-addon1"
+          ng-model="product.soLuong"
+        />
+      </div>
+    </div>
+    <!--  -->
+    <div class="row mb-4">
+      <div class="col-2"></div>
+      <div class="col-2"><p>Loại</p></div>
+      <div class="col-4">
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          ng-model="product.loai"
+        >
+          <option ng-repeat="la in loai" value="{{la.name}}">
+            {{la.name}}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="row mb-4">
+      <div class="col-2"></div>
+      <div class="col-2"><p>Ảnh</p></div>
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="formFile" class="form-label"
+            >Nên lựa chọn các ảnh đẹp , bắt mắt</label
+          >
+          <input
+            class="form-control"
+            type="file"
+            id="formFile"
+            onchange="angular.element(this).scope().onFileSelect(this)"
+          />
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="row mb-4">
+      <div class="col-2"></div>
+      <div class="col-2"><p>Mô tả</p></div>
+      <div class="col-7">
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea"
+            style="height: 100px"
+            ng-model="product.moTa"
+          ></textarea>
+          <label for="floatingTextarea"
+            >Mô tả ý nghĩa để có nhiều khách hàng hơn</label
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Chi tiết sản phẩm
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Tên : {{sp.tenSanPham}}</p>
+            <p>Giá tiền : {{sp.giaTien}}</p>
+            <p>Số lượng : {{sp.soLuong}}</p>
+            <p>Loại : {{sp.loai}}</p>
+            <p>Mô tả : {{sp.moTa}}</p>
+            <div class="text-center">
+              <img
+                src="{{sp.anh}}"
+                class="mx-auto d-block"
+                style="width: 270px"
+                alt="Lỗi ảnh"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="mt-3">
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        ng-click="addProduct($event)"
+      >
+        ADD
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        ng-click="updateProduct($event)"
+      >
+        UPDATE
+      </button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Tên sản phẩm</th>
+          <th scope="col">Giá tiền</th>
+          <th scope="col">Số lượng</th>
+          <th scope="col">Loại</th>
+          <th scope="col">Funtion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in sanPham">
+          <th scope="ro1w">{{x.id}}</th>
+          <td>{{x.tenSanPham}}</td>
+          <td>{{x.giaTien}}</td>
+          <td>{{x.soLuong}}</td>
+          <td>{{x.loai}}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              ng-click="ctProduct($event,$index)"
+            >
+              Detail
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              ng-click="detailProduct($event,$index)"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Chi tiết</button
+            ><button
+              type="button"
+              class="btn btn-outline-primary"
+              ng-click="deleteProduct($event,$index)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section></section>

@@ -1,0 +1,72 @@
+<div class="carda">
+  <div class="card">
+    <div class="row">
+      <div class="col-md-8 cart">
+        <div class="title">
+          <div class="row">
+            <div class="col">
+              <h4><b>Shopping Cart</b></h4>
+            </div>
+            <div class="col align-self-center text-right text-muted">
+              3 items
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div
+          class="row border-top border-bottom"
+          ng-repeat="x in sanPhamNguoiDung"
+        >
+          <div class="row main align-items-center">
+            <div class="col-1 cb">
+              <input
+                class="form-check-input mt-4"
+                type="checkbox"
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <div class="col-2">
+              <img class="img-fluid" ng-src="{{x.anh}}" />
+            </div>
+            <div class="col">
+              <div class="row text-muted">{{x.loai}}</div>
+              <div class="row">{{x.tenSanPham}}</div>
+            </div>
+            <div class="col">
+              <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+            </div>
+            <div class="col">
+              $ {{x.giaTien}} <i class="bi bi-eye"></i>
+              <span class="close">&#10005;</span>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+
+        <div class="back-to-shop">
+          <a href="#">&leftarrow;</a
+          ><span class="text-muted">Back to shop</span>
+        </div>
+      </div>
+      <div class="col-md-4 summary">
+        <div>
+          <h5><b>Tổng tiền</b></h5>
+        </div>
+        <hr />
+        <div class="row" ng-repeat="x in sanPhamNguoiDung">
+          <div class="col" style="padding-left: 0">{{x.tenSanPham}}</div>
+          <div class="col text-right">$ {{x.giaTien}}</div>
+        </div>
+
+        <div
+          class="row"
+          style="border-top: 1px solid rgba(0, 0, 0, 0.1); padding: 2vh 0"
+        >
+          <div class="col">Tổng giá tiền</div>
+          <div class="col text-right">$ {{tongTien}}</div>
+        </div>
+        <button class="btn">CHECKOUT</button>
+      </div>
+    </div>
+  </div>
+</div>

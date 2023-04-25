@@ -1,0 +1,51 @@
+<div class="container">
+  <h2 class="text-center mt-5 mb-4">Đổi mật khẩu</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <form>
+        <div class="form-group mb-3">
+          <label for="oldPassword">Mật khẩu cũ:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="oldPassword"
+            name="oldPassword"
+            ng-model="mk.matKhauCu"
+            required
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="newPassword">Mật khẩu mới:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="newPassword"
+            name="newPassword"
+            ng-model="mk.matKhauMoi"
+            required
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="confirmPassword">Xác nhận mật khẩu mới:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            name="confirmPassword"
+            ng-model="mk.matKhauXacNhan"
+            required
+          />
+        </div>
+        <div class="d-grid gap-2">
+          <button
+            type="button"
+            class="btn btn-primary btn-block mt-4"
+            ng-click="doiMatKhau()"
+          >
+            Lưu
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

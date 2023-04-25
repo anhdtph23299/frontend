@@ -1,0 +1,43 @@
+<section>
+  <div class="row text-center">
+    <div class="col-2">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <p class="navbar-brand loc" ng-click="locSP()">Tất cả</p>
+            </li>
+            <li class="nav-item" ng-repeat="x in loaiSanPham">
+              <p class="navbar-brand loc" ng-click="locSP(x.name)">
+                {{x.name}}
+              </p>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-10">
+      <div class="row">
+        <div class="col-4" ng-repeat="x in getAll | filter:{ loai: fil }">
+          <a href="#detail/product/{{x.id}}"
+            ><div class="card" style="width: 18rem" id="khoi">
+              <img src="{{x.anh}}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5>{{x.tenSanPham}}</h5>
+                <p>Giá tiền : ${{x.giaTien}}</p>
+                <button type="button" class="btn btn-primary">
+                  <i class="bi bi-eye text-white"></i>
+                </button>
+                <button type="button" class="btn btn-light">
+                  <i class="bi bi-cart"></i>
+                </button>
+                <button type="button" class="btn btn-danger">
+                  <i class="bi bi-chat"></i>
+                </button>
+              </div></div
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

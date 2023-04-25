@@ -1,0 +1,87 @@
+<section>
+  <div class="container">
+    <h1 class="text-center">Thêm loại sản phẩm</h1>
+    <!--  -->
+    <div class="row mb-4">
+      <div class="col-2"></div>
+      <div class="col-2"><p>ID</p></div>
+      <div class="col-4">
+        <input
+          type="text"
+          class="form-control"
+          aria-describedby="basic-addon1"
+          ng-model="getLoai.id"
+        />
+      </div>
+    </div>
+    <!--  -->
+    <div class="row mb-4">
+      <div class="col-2"></div>
+      <div class="col-2"><p>Tên loại</p></div>
+      <div class="col-4">
+        <input
+          type="text"
+          class="form-control"
+          aria-describedby="basic-addon1"
+          ng-model="getLoai.name"
+        />
+      </div>
+    </div>
+    <div class="mt-3">
+      <center>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          ng-click="addLoai($event)"
+        >
+          ADD
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          ng-click="updateLoai($event)"
+        >
+          UPDATE
+        </button>
+      </center>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">STT</th>
+          <th scope="col">ID</th>
+          <th scope="col">Tên loại</th>
+          <th scope="col">Funtion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in loai">
+          <th scope="row">{{$index+1}}</th>
+          <th scope="row">{{x.id}}</th>
+          <td>{{x.name}}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              ng-click="detailLoai($event,$index)"
+            >
+              Detail
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              ng-click="deleteLoai($event,$index)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

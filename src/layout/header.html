@@ -1,0 +1,102 @@
+<div class="container" ng-controller="headerController">
+  <div class="row">
+    <div class="col-7"></div>
+    <div class="col-1"></div>
+    <div class="col-2">
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Tài khoản
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#dangnhap">Đăng nhập</a></li>
+          <li><a class="dropdown-item" href="#dangky">Đăng ký</a></li>
+          <li><a class="dropdown-item" href="#doimatkhau">Đổi mật khẩu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-dark">
+        <a href="#cart" style="color: white"
+          >Giỏ hàng
+          <span class="badge text-bg-secondary">{{soLuongGiohang}}</span></a
+        >
+      </button>
+    </div>
+  </div>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <img
+        src="https://dcassetcdn.com/design_img/6165/17990/17990_139608_6165_image.jpg"
+        style="width: 200px; height: 100px"
+      />
+      <a class="navbar-brand" href="#">Trang chủ</a>
+      <a class="navbar-brand" href="#sanpham">Sản phẩm</a>
+      <a class="navbar-brand" href="#gioithieu">Giới thiệu cửa hàng</a>
+      <a class="navbar-brand" href="#tintuc">Sự kiện</a>
+    </div>
+  </nav>
+</div>
+<!-- carousel -->
+<!-- <div
+  id="carouselExampleIndicators"
+  class="carousel slide"
+  style="height: 500px"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div> -->
+<!-- <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="..." />
+    </div>
+  </div> -->
+<!-- <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
